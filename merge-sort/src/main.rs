@@ -1,10 +1,16 @@
 use std::env;
 
+fn merge_sort(
+    unordered_array: &mut Vec<u8>,
+    ordered_array: &mut Vec<u8>,
+    array_size: usize,
+) {
+}
+
 fn main() {
 
     let args: Vec<_> = env::args().collect();
-    let mut sub_arrays: Vec<Vec<u8>> = Vec::new();
-    let mut sub_array: Vec<u8> = Vec::new();
+    let mut unordered_array: Vec<u8> = Vec::new();
 
     for arg in args {
 
@@ -15,8 +21,15 @@ fn main() {
             continue;
         }
 
-        sub_array.push(input.unwrap());
+        unordered_array.push(input.unwrap());
     }
 
-    sub_arrays.push(sub_array);
+    let mut ordered_array: Vec<u8> = Vec::new();
+    let array_size = unordered_array.len();
+
+    merge_sort(
+        &mut unordered_array,
+        &mut ordered_array,
+        array_size,
+    );
 }
