@@ -2,9 +2,11 @@ use std::env;
 
 fn merge_sort(
     unordered_array: &mut Vec<u8>,
-    ordered_array: &mut Vec<u8>,
+    working_array: &mut Vec<u8>,
     array_size: usize,
 ) {
+
+    /* TODO: copy the unordered array into the working array */
 }
 
 fn main() {
@@ -24,12 +26,12 @@ fn main() {
         unordered_array.push(input.unwrap());
     }
 
-    let mut ordered_array: Vec<u8> = Vec::new();
+    let mut working_array: Vec<u8> = Vec::new();
     let array_size = unordered_array.len();
 
     merge_sort(
         &mut unordered_array,
-        &mut ordered_array,
+        &mut working_array,
         array_size,
     );
 }
