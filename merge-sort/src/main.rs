@@ -6,6 +6,8 @@ fn merge(
     start_index: usize,
     end_index: usize,
 ) {
+    /* find the middle of the given range */
+    let middle = (start_index + end_index) / 2;
 }
 
 fn merge_sort(
