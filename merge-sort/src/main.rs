@@ -84,4 +84,8 @@ fn main() {
         &mut working_array,
         array_size,
     );
+
+    for value in working_array {
+        println!("{}", value);
+    }
 }
