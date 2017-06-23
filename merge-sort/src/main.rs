@@ -1,5 +1,14 @@
 use std::env;
 
+fn merge_items(
+    unordered_array: &mut Vec<u8>,
+    working_array: &mut Vec<u8>,
+    start_index: usize,
+    end_index: usize,
+    middle: usize,
+) {
+}
+
 fn merge(
     unordered_array: &mut Vec<u8>,
     working_array: &mut Vec<u8>,
@@ -17,6 +26,14 @@ fn merge(
         unordered_array,
         working_array,
         start_index,
+        middle,
+    );
+
+    merge_items(
+        working_array,
+        unordered_array,
+        start_index,
+        end_index,
         middle,
     );
 }
