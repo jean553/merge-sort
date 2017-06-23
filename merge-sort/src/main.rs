@@ -6,8 +6,19 @@ fn merge(
     start_index: usize,
     end_index: usize,
 ) {
+    if end_index - start_index < 2 {
+        return;
+    }
+
     /* find the middle of the given range */
     let middle = (start_index + end_index) / 2;
+
+    merge(
+        unordered_array,
+        working_array,
+        start_index,
+        middle,
+    );
 }
 
 fn merge_sort(
