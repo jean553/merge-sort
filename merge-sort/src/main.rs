@@ -31,7 +31,7 @@ fn merge_sort(
        the working array has now the same content
        as the unordered array */
     for index in (0..unordered_array.len()) {
-        working_array[index] = unordered_array[index];
+        working_array.push(unordered_array[index]);
     }
 
     merge(
