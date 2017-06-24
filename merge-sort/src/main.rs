@@ -1,12 +1,19 @@
 use std::env;
 
 /// Invert the two arrays item if they are not in the correct order
-fn merge(array: &mut [u8]) {
+fn merge(
+    array: &mut [u8],
+    start: usize,
+    end: usize,
+) {
 
     /* TODO: partially implemented */
 
-    if array[1] < array[0] {
-        array.swap(0, 1);
+    if array[end] < array[start] {
+        array.swap(
+            start,
+            end,
+        );
     }
 }
 
@@ -27,7 +34,17 @@ fn main() {
         unordered_array.push(input.unwrap());
     }
 
-    merge(&mut unordered_array);
+    merge(
+        &mut unordered_array,
+        0,
+        1,
+    );
+
+    merge(
+        &mut unordered_array,
+        2,
+        3,
+    );
 
     for value in unordered_array {
         println!("{}", value);
