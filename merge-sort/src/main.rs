@@ -1,5 +1,15 @@
 use std::env;
 
+/// Invert the two arrays item if they are not in the correct order
+fn merge(array: &mut [u8]) {
+
+    /* TODO: partially implemented */
+
+    if array[1] < array[0] {
+        array.swap(0, 1);
+    }
+}
+
 fn main() {
 
     let args: Vec<_> = env::args().collect();
@@ -15,5 +25,11 @@ fn main() {
         }
 
         unordered_array.push(input.unwrap());
+    }
+
+    merge(&mut unordered_array);
+
+    for value in unordered_array {
+        println!("{}", value);
     }
 }
