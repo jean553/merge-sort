@@ -105,4 +105,24 @@ mod tests {
             "five items array cannot be sorted",
         );
     }
+
+    #[test]
+    fn test_with_five_items_array_and_two_equal_items() {
+
+        let mut source = [7, 5, 8, 2, 3, 5];
+        let mut destination = [7, 5, 8, 2, 3, 5];
+
+        ms::merge_sort(
+            &mut source,
+            &mut destination,
+            0,
+            6,
+        );
+
+        assert_eq!(
+            destination,
+            [2, 3, 5, 5, 7, 8],
+            "five items with two equal items array cannot be sorted",
+        );
+    }
 }
