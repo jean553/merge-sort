@@ -18,15 +18,15 @@ mod ms {
         let middle = (end + start) / 2;
 
         merge_sort(
-            source,
             destination,
+            source,
             start,
             middle,
         );
 
         merge_sort(
-            source,
             destination,
+            source,
             middle,
             end,
         );
@@ -63,6 +63,26 @@ mod tests {
             destination,
             [5, 7],
             "two items array cannot be sorted",
+        );
+    }
+
+    #[test]
+    fn test_with_four_items_array() {
+
+        let mut source = [7, 5, 8, 2];
+        let mut destination = [7, 5, 8, 2];
+
+        ms::merge_sort(
+            &mut source,
+            &mut destination,
+            0,
+            4,
+        );
+
+        assert_eq!(
+            destination,
+            [2, 5, 7, 8],
+            "four items array cannot be sorted",
         );
     }
 }
