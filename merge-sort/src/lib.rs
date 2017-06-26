@@ -85,4 +85,24 @@ mod tests {
             "four items array cannot be sorted",
         );
     }
+
+    #[test]
+    fn test_with_five_items_array() {
+
+        let mut source = [7, 5, 8, 2, 3];
+        let mut destination = [7, 5, 8, 2, 3];
+
+        ms::merge_sort(
+            &mut source,
+            &mut destination,
+            0,
+            5,
+        );
+
+        assert_eq!(
+            destination,
+            [2, 3, 5, 7, 8],
+            "five items array cannot be sorted",
+        );
+    }
 }
