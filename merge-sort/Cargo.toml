@@ -4,4 +4,4 @@ version = "0.1.0"
 authors = ["Jean LELIEVRE <Jean.LELIEVRE@supinfo.com>"]
 
 [dependencies]
-array-merge = "0.1.0"
+array-merge = "0.1.1"
